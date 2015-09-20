@@ -2,8 +2,8 @@
 
 # Java Version
 JAVA_VERSION_MAJOR="8"
-JAVA_VERSION_MINOR="45"
-JAVA_VERSION_BUILD="14"
+JAVA_VERSION_MINOR="60"
+JAVA_VERSION_BUILD="27"
 JAVA_PACKAGE="jdk"
 JAVA_DIRECTORY="jdk1.${JAVA_VERSION_MAJOR}.0_${JAVA_VERSION_MINOR}"
 
@@ -19,7 +19,7 @@ update-alternatives --install "/usr/bin/javac" "javac" "/usr/lib/jvm/java-${JAVA
 rm /home/vagrant/${JAVA_PACKAGE}-${JAVA_VERSION_MAJOR}u${JAVA_VERSION_MINOR}-linux-x64.tar.gz
 
 echo "Installing SBT ..."
-wget https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/sbt-launch/0.13.7/sbt-launch.jar
+wget https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/sbt-launch/0.13.9/sbt-launch.jar
 mv sbt-launch.jar /bin/sbt-launch.jar
 
 cat > /bin/sbt << 'EOF'
